@@ -3,6 +3,11 @@ local M = {}
 M.ui = {
   theme_toggle = { "onedark", "one_light" },
   theme = "onedark",
+  hl_override = {
+    CursorLine = {
+      bg = "one_bg",
+    },
+  },
 }
 
 M.plugins = require "custom.plugins"

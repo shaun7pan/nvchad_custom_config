@@ -6,7 +6,7 @@ M.treesitter = {
     "lua",
     "html",
     "css",
-    "tsserver",
+    -- "tsserver",
     "c",
   },
 }
@@ -20,7 +20,7 @@ M.mason = {
     -- web dev stuff
     "css-lsp",
     "html-lsp",
-    "typescript-language-server",
+    -- "typescript-language-server",
     "deno",
   },
 }
@@ -39,6 +39,10 @@ M.nvimtree = {
       },
     },
   },
+}
+
+M.indent_blankline = {
+  show_current_context = false,
 }
 
 return M
