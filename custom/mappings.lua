@@ -77,7 +77,21 @@ M.shaun = {
 			opts = { nowait = true },
 		},
 		["<C-c>"] = { "<Esc>", "unmap tab", opts = { nowait = true } },
-		-- ["s"] = { "<cmd>HopChar2<CR>", "hop word", opts = { nowait = true } },
+		["]c"] = {
+			'<cmd>lua require("custom.functions").next_hunk()<CR>',
+			"next hunk",
+			opts = { nowait = true },
+		},
+		["[c"] = {
+			'<cmd>lua require("custom.functions").prev_hunk()<CR>',
+			"prev hunk",
+			opts = { nowait = true },
+		},
+		["<leader>gp"] = {
+			"<cmd>Gitsigns preview_hunk<CR>",
+			"hunk preview",
+			opts = { nowait = true },
+		},
 	},
 	v = {
 		["Y"] = { '"+y', "yank to clipboardvim", opts = { nowait = true } },
