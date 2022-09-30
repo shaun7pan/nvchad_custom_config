@@ -73,6 +73,9 @@ return {
 						},
 					},
 				},
+				extensions_list = {
+					"fzf",
+				},
 			}
 		end,
 	},
@@ -97,4 +100,7 @@ return {
 	--     }
 	--   end,
 	-- },
+	["nvim-telescope/telescope-fzf-native.nvim"] = {
+		run = "make",
+	},
 }
