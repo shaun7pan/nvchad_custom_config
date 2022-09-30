@@ -75,6 +75,8 @@ return {
 				},
 				extensions_list = {
 					"fzf",
+					"themes",
+					"terms",
 				},
 			}
 		end,
