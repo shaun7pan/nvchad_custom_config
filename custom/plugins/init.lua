@@ -118,4 +118,10 @@ return {
 			require("telescope").load_extension("project")
 		end,
 	},
+	-- ["akinsho/toggleterm.nvim"] = {
+	-- 	tag = "*",
+	-- 	config = function()
+	-- 		require("toggleterm").setup()
+	-- 	end,
+	-- },
 }
