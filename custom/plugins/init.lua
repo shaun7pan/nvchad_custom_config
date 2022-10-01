@@ -83,6 +83,10 @@ return {
 		end,
 	},
 
+	["NvChad/nvterm"] = {
+		override_options = overrides.nvterm,
+	},
+
 	["lukas-reineke/indent-blankline.nvim"] = {
 		override_options = overrides.indent_blankline,
 	},

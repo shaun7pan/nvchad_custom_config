@@ -31,6 +31,3 @@ autocmd("BufWritePre", {
 
 -- enable sneak lable
 vim.cmd([[ let g:sneak#label = 1 ]])
-
--- set default shell
-vim.opt.shell = "/usr/local/bin/bash -l"
