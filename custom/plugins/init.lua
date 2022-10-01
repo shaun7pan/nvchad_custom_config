@@ -77,6 +77,7 @@ return {
 					"fzf",
 					"themes",
 					"terms",
+					"file_browser",
 				},
 			}
 		end,
@@ -104,5 +105,13 @@ return {
 	-- },
 	["nvim-telescope/telescope-fzf-native.nvim"] = {
 		run = "make",
+	},
+	["nvim-telescope/telescope-file-browser.nvim"] = {},
+	["nvim-telescope/telescope-project.nvim"] = {
+		after = "telescope.nvim",
+		module = "telescope",
+		config = function()
+			require("telescope").load_extension("project")
+		end,
 	},
 }

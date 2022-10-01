@@ -92,6 +92,11 @@ M.shaun = {
 			"hunk preview",
 			opts = { nowait = true },
 		},
+		["<C-p>"] = {
+			"<cmd>lua require'telescope'.extensions.project.project{}<CR>",
+			"telescope project",
+			opts = { nowait = true, silent = true, noremap = true },
+		},
 	},
 	v = {
 		["Y"] = { '"+y', "yank to clipboardvim", opts = { nowait = true } },
