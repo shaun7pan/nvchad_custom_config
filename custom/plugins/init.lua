@@ -98,15 +98,6 @@ return {
 	["tpope/vim-surround"] = {},
 	["tpope/vim-unimpaired"] = {},
 	["tpope/vim-fugitive"] = {},
-	-- ["phaazon/hop.nvim"] = {
-	--   branch = "v2", -- optional but strongly recommended
-	--   config = function()
-	--     -- you can configure Hop the way you like here; see :h hop-config
-	--     require("hop").setup {
-	--       keys = "etovxqpdygfblzhckisuran",
-	--     }
-	--   end,
-	-- },
 	["nvim-telescope/telescope-fzf-native.nvim"] = {
 		run = "make",
 	},
@@ -116,12 +107,6 @@ return {
 		module = "telescope",
 		config = function()
 			require("telescope").load_extension("project")
-		end,
-	},
-	["akinsho/toggleterm.nvim"] = {
-		tag = "*",
-		config = function()
-			require("toggleterm").setup()
 		end,
 	},
 }
