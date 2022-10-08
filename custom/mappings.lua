@@ -5,6 +5,8 @@ M.shaun = {
 	i = {
 		-- ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
 		["<C-s>"] = { "<ESC>:w<CR>", "save in insert mode", opts = { nowait = true } },
+		["<C-CR>"] = { "<C-o>O", "newline down", opts = { nowait = true } },
+		["<S-CR>"] = { "<C-o>o", "newline up", opts = { nowait = true } },
 	},
 	n = {
 		["<C-q>"] = { '<cmd>lua require("custom.functions").smart_quit()<CR>', "smart quit", opts = { nowait = true } },
