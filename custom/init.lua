@@ -15,9 +15,9 @@ autocmd("TextYankPost", {
 })
 
 -- go to last loc when opening a buffer
-autocmd("BufReadPost", {
+autocmd("BufRead", {
 	pattern = "*",
-	command = [[if line("'\"" >1 && line("'\"")) <= line("$") | execute "normal! g`\"" | endif]],
+	command = [[if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif ]],
 })
 
 -- Do not c/d/yw to clipboard
