@@ -25,6 +25,9 @@ local sources = {
 
 	-- golang
 	b.formatting.goimports,
+
+	-- json
+	b.formatting.fixjson,
 }
 
 null_ls.setup({
