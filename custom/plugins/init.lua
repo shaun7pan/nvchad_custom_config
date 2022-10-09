@@ -30,13 +30,6 @@ return {
 		event = "InsertEnter",
 	},
 
-	-- ["max397574/better-escape.nvim"] = {
-	--   event = "InsertEnter",
-	--   config = function()
-	--     require("better_escape").setup()
-	--   end,
-	-- },
-
 	-- code formatting, linting etc
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
