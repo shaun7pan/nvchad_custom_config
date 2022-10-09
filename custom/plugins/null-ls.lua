@@ -30,7 +30,7 @@ local sources = {
 	b.formatting.fixjson,
 
 	-- python
-	b.formatting.autopep8,
+	b.formatting.black,
 }
 
 null_ls.setup({
