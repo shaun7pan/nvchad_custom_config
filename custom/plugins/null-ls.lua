@@ -21,7 +21,6 @@ local sources = {
 
 	-- cpp
 	b.formatting.clang_format,
-	b.formatting.rustfmt,
 
 	-- golang
 	b.formatting.goimports,
@@ -30,7 +29,10 @@ local sources = {
 	b.formatting.fixjson,
 
 	-- python
-	b.formatting.black,
+	-- b.formatting.black,
+
+	-- rust
+	b.formatting.rustfmt,
 }
 
 null_ls.setup({
