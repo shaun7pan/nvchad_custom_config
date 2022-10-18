@@ -116,4 +116,21 @@ M.nvimtree = {
 	},
 }
 
+M.telescope = {
+	plugin = true,
+
+	n = {
+		-- toggle
+		["<leader><leader>"] = { "<cmd> Telescope <CR>", "toggle telescope" },
+	},
+}
+
+M.alpha = {
+
+	n = {
+		-- toggle
+		["<c-space>"] = { "<cmd> Alpha <CR>", "toggle alpha-nvim" },
+	},
+}
+
 return M
