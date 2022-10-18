@@ -107,4 +107,13 @@ M.shaun = {
 	t = { ["<esc>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "escape terminal mode" } },
 }
 
+M.nvimtree = {
+	plugin = true,
+
+	t = {
+		-- toggle
+		["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
+	},
+}
+
 return M
