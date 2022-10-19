@@ -121,7 +121,7 @@ M.telescope = {
 
 	n = {
 		-- toggle
-		["<leader><leader>"] = { "<cmd> Telescope <CR>", "toggle telescope" },
+		["<leader>ts"] = { "<cmd> Telescope <CR>", "toggle telescope" },
 	},
 }
 
