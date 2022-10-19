@@ -133,4 +133,13 @@ M.alpha = {
 	},
 }
 
+M.ui = {
+
+	n = {
+		-- toggle
+		["<leader>X"] = {
+			'<cmd>lua require("nvchad_ui.tabufline").closeAllBufs()<CR>',
+		},
+	},
+}
 return M
