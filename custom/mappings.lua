@@ -17,7 +17,6 @@ M.shaun = {
 		["<leader>sl"] = { "<cmd>set splitright <CR> <cmd>vsplit<CR>", "split right", opts = { nowait = true } },
 		["<leader>sj"] = { "<cmd>set splitbelow <CR> <cmd>split<CR>", "split below", opts = { nowait = true } },
 		["<leader>sk"] = { "<cmd>set nosplitbelow <CR> <cmd>split<CR>", "split up", opts = { nowait = true } },
-		["<leader>e"] = { "<cmd>NvimTreeFindFileToggle<CR>", "Nvim Tree Find File Toggle", opts = { nowait = true } },
 
 		["<leader>ww"] = { "<cmd>e /Users/a560827/.shaunTILlkjlkj<CR>", "edit my file", opts = { nowait = true } },
 
@@ -129,7 +128,7 @@ M.alpha = {
 
 	n = {
 		-- toggle
-		["<c-space>"] = { "<cmd> Alpha <CR>", "toggle alpha-nvim" },
+		["<leader>al"] = { "<cmd> Alpha <CR>", "toggle alpha-nvim" },
 	},
 }
 

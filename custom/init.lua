@@ -26,8 +26,13 @@ vim.opt.clipboard = ""
 -- format on save
 autocmd("BufWritePre", {
 	pattern = "*",
-	command = "lua vim.lsp.buf.formatting_sync()",
+	command = "lua vim.lsp.buf.format()",
 })
 
 -- enable sneak lable
 vim.cmd([[ let g:sneak#label = 1 ]])
+
+-- indent
+vim.opt.list = true
+vim.opt.listchars:append("space:⋅")
+-- vim.opt.listchars:append("eol:↴")
