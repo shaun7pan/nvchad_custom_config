@@ -103,7 +103,7 @@ M.shaun = {
 		["Y"] = { '"+y', "yank to clipboardvim", opts = { nowait = true } },
 		["<leader>p"] = { '"_dP', "greatest remap ever", opts = { nowait = true } },
 	},
-	t = { ["<esc>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "escape terminal mode" } },
+	t = { ["jj"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "escape terminal mode" } },
 }
 
 M.nvimtree = {
@@ -111,7 +111,13 @@ M.nvimtree = {
 
 	t = {
 		-- toggle
-		["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
+		["<C-space>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
+	},
+
+	n = {
+		-- toggle
+		["<C-space>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
+		["<C-n>"] = { "<Nop>" },
 	},
 }
 
