@@ -101,7 +101,7 @@ M.shaun = {
 	},
 	v = {
 		["Y"] = { '"+y', "yank to clipboardvim", opts = { nowait = true } },
-		["<leader>p"] = { '"_dP', "greatest remap ever", opts = { nowait = true } },
+		["<leader>p"] = { '"+p', "greatest remap ever", opts = { nowait = true } },
 	},
 	t = { ["jj"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "escape terminal mode" } },
 }

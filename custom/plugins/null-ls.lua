@@ -29,7 +29,7 @@ local sources = {
 	b.formatting.fixjson,
 
 	-- python
-	-- b.formatting.black,
+	b.formatting.black,
 
 	-- rust
 	b.formatting.rustfmt,
