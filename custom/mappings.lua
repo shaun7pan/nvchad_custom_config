@@ -52,31 +52,6 @@ M.shaun = {
 			"harpoon select file",
 			opts = { nowait = true },
 		},
-		["<leader>5"] = {
-			'<cmd>lua require("harpoon.ui").nav_file(5)<CR>',
-			"harpoon select file",
-			opts = { nowait = true },
-		},
-		["<leader>6"] = {
-			'<cmd>lua require("harpoon.ui").nav_file(6)<CR>',
-			"harpoon select file",
-			opts = { nowait = true },
-		},
-		["<leader>7"] = {
-			'<cmd>lua require("harpoon.ui").nav_file(7)<CR>',
-			"harpoon select file",
-			opts = { nowait = true },
-		},
-		["<leader>8"] = {
-			'<cmd>lua require("harpoon.ui").nav_file(8)<CR>',
-			"harpoon select file",
-			opts = { nowait = true },
-		},
-		["<leader>9"] = {
-			'<cmd>lua require("harpoon.ui").nav_file(9)<CR>',
-			"harpoon select file",
-			opts = { nowait = true },
-		},
 		["<C-c>"] = { "<Esc>", "unmap tab", opts = { nowait = true } },
 		["]c"] = {
 			'<cmd>lua require("custom.functions").next_hunk()<CR>',
@@ -98,10 +73,14 @@ M.shaun = {
 			"telescope project",
 			opts = { nowait = true, silent = true, noremap = true },
 		},
+		--no longer needed since using system clipboard`
+		-- ["<leader>pp"] = { '"+p', "paste from system clipboard", opts = { nowait = true } },
 	},
 	v = {
-		["Y"] = { '"+y', "yank to clipboardvim", opts = { nowait = true } },
-		["<leader>p"] = { '"+p', "greatest remap ever", opts = { nowait = true } },
+		--no longer needed since using system clipboard`
+		-- ["Y"] = { '"+y', "yank to clipboardvim", opts = { nowait = true } },
+		-- ["<leader>p"] = { '"+p', "paste from system clipboard", opts = { nowait = true } },
+		["<leader>p"] = { '"_dP', "Greatest remap EVER!!", opts = { nowait = true } },
 	},
 	t = { ["jj"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "escape terminal mode" } },
 }

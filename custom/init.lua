@@ -21,7 +21,7 @@ autocmd("BufRead", {
 })
 
 -- Do not c/d/yw to clipboard
-vim.opt.clipboard = ""
+-- vim.opt.clipboard = ""
 
 -- format on save
 autocmd("BufWritePre", {
