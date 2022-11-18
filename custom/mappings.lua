@@ -73,6 +73,8 @@ M.shaun = {
 			"telescope project",
 			opts = { nowait = true, silent = true, noremap = true },
 		},
+		["<leader>d"] = { '"_d', "delete without yank", opts = { nowait = true } },
+		["<leader>c"] = { '"_c', "change without yank", opts = { nowait = true } },
 		--no longer needed since using system clipboard`
 		-- ["<leader>pp"] = { '"+p', "paste from system clipboard", opts = { nowait = true } },
 	},
@@ -81,6 +83,8 @@ M.shaun = {
 		-- ["Y"] = { '"+y', "yank to clipboardvim", opts = { nowait = true } },
 		-- ["<leader>p"] = { '"+p', "paste from system clipboard", opts = { nowait = true } },
 		["<leader>p"] = { '"_dP', "Greatest remap EVER!!", opts = { nowait = true } },
+		["<leader>d"] = { '"_d', "delete without yank", opts = { nowait = true } },
+		["<leader>c"] = { '"_c', "change without yank", opts = { nowait = true } },
 	},
 	t = { ["jj"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "escape terminal mode" } },
 }
