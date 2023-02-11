@@ -25,14 +25,17 @@ local sources = {
 	-- golang
 	b.formatting.goimports,
 
-	-- json
-	b.formatting.fixjson,
-
 	-- python
 	b.formatting.black,
 
 	-- rust
 	b.formatting.rustfmt,
+
+	-- jq
+	b.formatting.jq,
+
+	-- terraform
+	b.formatting.terraform_fmt,
 }
 
 null_ls.setup({
