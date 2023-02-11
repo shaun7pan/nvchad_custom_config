@@ -77,6 +77,7 @@ M.shaun = {
 		["<leader>c"] = { '"_c', "change without yank", opts = { nowait = true } },
 		--no longer needed since using system clipboard`
 		-- ["<leader>pp"] = { '"+p', "paste from system clipboard", opts = { nowait = true } },
+		["<leader>xx"] = { "<cmd>!chmod +x %<CR>", "excutable", opts = { silent = true } },
 	},
 	v = {
 		--no longer needed since using system clipboard`
