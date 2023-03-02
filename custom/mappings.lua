@@ -1,6 +1,14 @@
 local M = {}
 
 -- more keybinds!
+-- -- add this table only when you want to disable default keys
+M.disabled = {
+	n = {
+		["gi"] = "",
+		["<TAB>"] = "",
+	},
+}
+
 M.shaun = {
 	i = {
 		-- ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
@@ -75,9 +83,19 @@ M.shaun = {
 		},
 		["<leader>d"] = { '"_d', "delete without yank", opts = { nowait = true } },
 		["<leader>c"] = { '"_c', "change without yank", opts = { nowait = true } },
+		["<leader>gi"] = {
+			function()
+				vim.lsp.buf.implementation()
+			end,
+			"lsp implementation",
+		},
 		--no longer needed since using system clipboard`
 		-- ["<leader>pp"] = { '"+p', "paste from system clipboard", opts = { nowait = true } },
 		["<leader>xx"] = { "<cmd>!chmod +x %<CR>", "excutable", opts = { silent = true } },
+		["<C-d>"] = { "<C-d>zz", "be in the central of the screen", opts = { silent = true } },
+		["<C-u>"] = { "<C-u>zz", "be in the central of the screen", opts = { silent = true } },
+		["n"] = { "nzzzv", "be in the central of the screen", opts = { silent = true } },
+		["N"] = { "Nzzzv", "be in the central of the screen", opts = { silent = true } },
 	},
 	v = {
 		--no longer needed since using system clipboard`
@@ -111,7 +129,7 @@ M.telescope = {
 	n = {
 		-- toggle
 		["<leader>ts"] = { "<cmd> Telescope <CR>", "toggle telescope" },
-		["<leader>bb"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
+		["<leader>fg"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
 	},
 }
 

@@ -103,4 +103,5 @@ return {
 			require("telescope").load_extension("project")
 		end,
 	},
+	["ThePrimeagen/vim-be-good"] = {},
 }
