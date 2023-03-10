@@ -5,6 +5,7 @@ local M = {}
 M.disabled = {
 	n = {
 		["gi"] = "",
+		["gr"] = "",
 		["<TAB>"] = "",
 	},
 }
@@ -84,10 +85,14 @@ M.shaun = {
 		["<leader>d"] = { '"_d', "delete without yank", opts = { nowait = true } },
 		["<leader>c"] = { '"_c', "change without yank", opts = { nowait = true } },
 		["<leader>gi"] = {
-			function()
-				vim.lsp.buf.implementation()
-			end,
-			"lsp implementation",
+			"<cmd>lua require'telescope.builtin'.lsp_implementations{}<CR>",
+			"go to reference",
+			opts = { nowait = true },
+		},
+		["gr"] = {
+			"<cmd>lua require'telescope.builtin'.lsp_references{}<CR>",
+			"go to reference",
+			opts = { nowait = true },
 		},
 		--no longer needed since using system clipboard`
 		-- ["<leader>pp"] = { '"+p', "paste from system clipboard", opts = { nowait = true } },
@@ -96,6 +101,7 @@ M.shaun = {
 		["<C-u>"] = { "<C-u>zz", "be in the central of the screen", opts = { silent = true } },
 		["n"] = { "nzzzv", "be in the central of the screen", opts = { silent = true } },
 		["N"] = { "Nzzzv", "be in the central of the screen", opts = { silent = true } },
+		["gd"] = { "gdzz", "be in the central of the screen", opts = { silent = true } },
 	},
 	v = {
 		--no longer needed since using system clipboard`
