@@ -37,6 +37,9 @@ local sources = {
 	-- jq
 	b.formatting.jq,
 
+	-- yaml
+	b.formatting.yamlfmt,
+
 	-- terraform
 	b.formatting.terraform_fmt,
 }
