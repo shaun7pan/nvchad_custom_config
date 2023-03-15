@@ -23,11 +23,9 @@ local sources = {
 	b.code_actions.shellcheck,
 	b.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
 
-	-- cpp
-	b.formatting.clang_format,
-
 	-- golang
 	b.formatting.goimports,
+	b.diagnostics.golangci_lint,
 
 	-- python
 	b.formatting.black,

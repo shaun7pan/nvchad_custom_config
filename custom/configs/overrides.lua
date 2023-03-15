@@ -140,14 +140,23 @@ M.treesitter = {
 M.mason = {
 	ensure_installed = {
 		-- lua stuff
+		"bash-language-server",
+		"black",
+		"goimports",
+		"gopls",
+		"jq",
 		"lua-language-server",
+		"pyright",
+		"rust-analyzer",
+		"rustfmt",
+		"shellcheck",
+		"shfmt",
 		"stylua",
-
-		-- web dev stuff
-		"css-lsp",
-		"html-lsp",
-		"typescript-language-server",
-		"deno",
+		"terraform-ls",
+		"tflint",
+		"yamlfmt",
+		"dockerfile-language-server",
+		"golangci-lint",
 	},
 }
 
