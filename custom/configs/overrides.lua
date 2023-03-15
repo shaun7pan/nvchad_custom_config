@@ -168,6 +168,16 @@ M.nvimtree = {
 			show = {
 				git = true,
 			},
+			glyphs = {
+				folder = {
+					open = "",
+					empty_open = "",
+					symlink_open = "",
+				},
+				git = {
+					unmerged = "",
+				},
+			},
 		},
 	},
 }
