@@ -20,6 +20,7 @@ local sources = {
 		extra_args = { "-i", "2", "-ci" },
 	}),
 
+	b.code_actions.shellcheck,
 	b.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
 
 	-- cpp
@@ -38,7 +39,7 @@ local sources = {
 	b.formatting.jq,
 
 	-- yaml
-	b.formatting.yamlfmt,
+	-- b.formatting.yamlfmt,
 
 	-- terraform
 	b.formatting.terraform_fmt,
