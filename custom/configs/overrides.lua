@@ -182,4 +182,10 @@ M.nvterm = {
 	},
 }
 
+M.telescope = {
+	defaults = {
+		prompt_prefix = "  ",
+	},
+}
+
 return M
