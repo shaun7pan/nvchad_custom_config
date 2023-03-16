@@ -6,10 +6,6 @@ local lspconfig = require("lspconfig")
 -- if you just want default config for the servers then put them in a table
 local servers = {
 	"bashls",
-	"html",
-	"cssls",
-	"tsserver",
-	"clangd",
 	"gopls",
 	"rust_analyzer",
 	"pyright",
