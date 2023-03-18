@@ -55,7 +55,14 @@ local plugins = {
 			require("telescope").load_extension("project")
 		end,
 	},
-
+	{
+		"nvim-telescope/telescope-fzf-native.nvim",
+		dependencies = { "telescope.nvim" },
+		build = "make",
+		config = function()
+			require("telescope").load_extension("fzf")
+		end,
+	},
 	{
 		"nvim-telescope/telescope.nvim",
 		opts = overrides.telescope,

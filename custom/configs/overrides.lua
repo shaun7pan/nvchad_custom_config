@@ -203,8 +203,9 @@ M.nvterm = {
 
 M.telescope = {
 	defaults = {
-		prompt_prefix = "  ",
+		prompt_prefix = "   ",
 	},
+	extensions_list = { "themes", "terms", "fzf" },
 }
 
 return M
