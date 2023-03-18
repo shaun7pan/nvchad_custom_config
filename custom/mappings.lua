@@ -159,7 +159,7 @@ M.telescope = {
 		-- toggle
 		["<leader>ts"] = { "<cmd> Telescope <CR>", "toggle telescope" },
 		["<leader>fg"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
-		["<leader>fr"] = { "<cmd> Telescope command_history <CR>", "find command history" },
+		["<leader>fx"] = { "<cmd> Telescope command_history <CR>", "find command history" },
 		["<leader>fs"] = { "<cmd> Telescope search_history <CR>", "find search history" },
 	},
 }
