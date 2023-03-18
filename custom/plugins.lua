@@ -56,6 +56,18 @@ local plugins = {
 		end,
 	},
 	{
+		"AckslD/nvim-neoclip.lua",
+		dependencies = {
+			{ "kkharji/sqlite.lua" },
+			{ "nvim-telescope/telescope.nvim" },
+		},
+		config = function()
+			require("neoclip").setup({
+				enable_persistent_history = true,
+			})
+		end,
+	},
+	{
 		"nvim-telescope/telescope-fzf-native.nvim",
 		dependencies = { "telescope.nvim" },
 		build = "make",

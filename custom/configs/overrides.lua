@@ -205,7 +205,7 @@ M.telescope = {
 	defaults = {
 		prompt_prefix = "   ",
 	},
-	extensions_list = { "themes", "terms", "fzf" },
+	extensions_list = { "themes", "terms", "fzf", "neoclip" },
 }
 
 return M
