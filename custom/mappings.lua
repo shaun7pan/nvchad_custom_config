@@ -106,12 +106,6 @@ M.shaun = {
 		["<C-u>"] = { "<C-u>zz", "be in the central of the screen", opts = { silent = true } },
 		["n"] = { "nzzzv", "be in the central of the screen", opts = { silent = true } },
 		["N"] = { "Nzzzv", "be in the central of the screen", opts = { silent = true } },
-		["<leader><leader>"] = {
-			"<cmd> Telescope neoclip plus extra=star,unnamed<CR>",
-			"better clipboard",
-			opts = { silent = true },
-		},
-		-- ["gd"] = { "gdzz", "be in the central of the screen", opts = { silent = true } },
 	},
 	v = {
 		--no longer needed since using system clipboard`
