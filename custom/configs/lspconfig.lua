@@ -8,6 +8,7 @@ local servers = {
 	"bashls",
 	"gopls",
 	"rust_analyzer",
+	"terraformls",
 	"pyright",
 	"tflint",
 }
