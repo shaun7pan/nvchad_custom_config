@@ -155,6 +155,7 @@ M.telescope = {
 		["<leader>ff"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
 		["<leader>fx"] = { "<cmd> Telescope command_history <CR>", "find command history" },
 		["<leader>fs"] = { "<cmd> Telescope search_history <CR>", "find search history" },
+		["<leader>fo"] = { "<cmd> Telescope oldfiles cwd_only=true <CR>", "MRU" },
 	},
 }
 
