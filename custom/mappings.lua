@@ -102,10 +102,10 @@ M.shaun = {
 		--no longer needed since using system clipboard`
 		-- ["<leader>pp"] = { '"+p', "paste from system clipboard", opts = { nowait = true } },
 		["<leader>xx"] = { "<cmd>!chmod +x %<CR>", "excutable", opts = { silent = true } },
-		["<C-d>"] = { "<C-d>zz", "be in the central of the screen", opts = { silent = true } },
-		["<C-u>"] = { "<C-u>zz", "be in the central of the screen", opts = { silent = true } },
-		["n"] = { "nzzzv", "be in the central of the screen", opts = { silent = true } },
-		["N"] = { "Nzzzv", "be in the central of the screen", opts = { silent = true } },
+		-- ["<C-d>"] = { "<C-d>zz", "be in the central of the screen", opts = { silent = true } },
+		-- ["<C-u>"] = { "<C-u>zz", "be in the central of the screen", opts = { silent = true } },
+		-- ["n"] = { "nzzzv", "be in the central of the screen", opts = { silent = true } },
+		-- ["N"] = { "Nzzzv", "be in the central of the screen", opts = { silent = true } },
 	},
 	v = {
 		--no longer needed since using system clipboard`
@@ -156,6 +156,8 @@ M.telescope = {
 		["<leader>fx"] = { "<cmd> Telescope command_history <CR>", "find command history" },
 		["<leader>fs"] = { "<cmd> Telescope search_history <CR>", "find search history" },
 		["<leader>fo"] = { "<cmd> Telescope oldfiles cwd_only=true <CR>", "MRU" },
+		["<leader>fy"] = { "<cmd> Telescope registers <CR>", "find registers" },
+		["<leader>ft"] = { "<cmd> Telescope tags <CR>", "find tags" },
 	},
 }
 
