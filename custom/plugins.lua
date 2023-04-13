@@ -48,13 +48,13 @@ local plugins = {
 			require("better_escape").setup()
 		end,
 	},
-	{
-		"nvim-telescope/telescope-project.nvim",
-		dependencies = { "telescope.nvim" },
-		config = function()
-			require("telescope").load_extension("project")
-		end,
-	},
+	-- {
+	-- 	"nvim-telescope/telescope-project.nvim",
+	-- 	dependencies = { "telescope.nvim" },
+	-- 	config = function()
+	-- 		require("telescope").load_extension("project")
+	-- 	end,
+	-- },
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
 		dependencies = { "telescope.nvim" },
@@ -66,6 +66,14 @@ local plugins = {
 	{
 		"nvim-telescope/telescope.nvim",
 		opts = overrides.telescope,
+	},
+	{
+		"iamcco/markdown-preview.nvim",
+		ft = "markdown",
+		event = "BufRead",
+		config = function()
+			vim.fn["mkdp#util#install"]()
+		end,
 	},
 	-- To make a plugin not be loaded
 	-- {

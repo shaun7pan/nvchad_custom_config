@@ -83,8 +83,10 @@ M.shaun = {
 			opts = { nowait = true },
 		},
 		["<C-p>"] = {
-			"<cmd>lua require'telescope'.extensions.project.project{}<CR>",
-			"telescope project",
+			-- "<cmd>lua require'telescope'.extensions.project.project{}<CR>",
+			"<cmd>MarkdownPreviewToggle<CR>",
+			-- "telescope project",
+			"Markdown preview",
 			opts = { nowait = true, silent = true, noremap = true },
 		},
 		["<leader>d"] = { '"_d', "delete without yank", opts = { nowait = true } },
