@@ -205,7 +205,13 @@ M.telescope = {
 	defaults = {
 		prompt_prefix = "   ",
 	},
-	extensions_list = { "themes", "terms", "fzf" },
+	extensions_list = { "themes", "terms", "fzf", "frecency" },
+	extensions = {
+		frecency = {
+			show_filter_column = false,
+			show_unindexed = false,
+		},
+	},
 }
 
 return M

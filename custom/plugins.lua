@@ -55,6 +55,14 @@ local plugins = {
 	-- 		require("telescope").load_extension("project")
 	-- 	end,
 	-- },
+	{ "kkharji/sqlite.lua" },
+	{
+		"nvim-telescope/telescope-frecency.nvim",
+		dependencies = { "telescope.nvim" },
+		config = function()
+			require("telescope").load_extension("frecency")
+		end,
+	},
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
 		dependencies = { "telescope.nvim" },

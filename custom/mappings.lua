@@ -154,12 +154,16 @@ M.telescope = {
 	n = {
 		-- toggle
 		["<leader>ts"] = { "<cmd> Telescope <CR>", "toggle telescope" },
-		["<leader>ff"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
 		["<leader>fx"] = { "<cmd> Telescope command_history <CR>", "find command history" },
 		["<leader>fs"] = { "<cmd> Telescope search_history <CR>", "find search history" },
 		["<leader>fo"] = { "<cmd> Telescope oldfiles cwd_only=true <CR>", "MRU" },
 		["<leader>fy"] = { "<cmd> Telescope registers <CR>", "find registers" },
 		["<leader>ft"] = { "<cmd> Telescope tags <CR>", "find tags" },
+		["<leader>ff"] = {
+			'<Cmd>lua require("telescope").extensions.frecency.frecency({ workspace = "CWD" })<CR>',
+			"find frecency",
+			opts = { noremap = true, silent = true },
+		},
 	},
 }
 
