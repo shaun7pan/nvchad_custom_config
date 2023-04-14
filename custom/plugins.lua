@@ -91,6 +91,10 @@ local plugins = {
 
 	-- Uncomment if you want to re-enable which-key
 	{
+		"christoomey/vim-tmux-navigator",
+		lazy = false,
+	},
+	{
 		"folke/which-key.nvim",
 		enabled = true,
 	},

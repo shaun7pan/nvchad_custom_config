@@ -12,6 +12,10 @@ M.disabled = {
 		["gi"] = "",
 		["<tab>"] = "",
 		["gr"] = "",
+		["<C-h>"] = "",
+		["<C-j>"] = "",
+		["<C-k>"] = "",
+		["<C-l>"] = "", -- Those keys will be map to `TmuxNavigateLeft/TmuxNavigateDown/TmuxNavigateUp/TmuxNavigateRight`
 	},
 }
 
