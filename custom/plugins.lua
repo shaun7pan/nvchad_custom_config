@@ -100,10 +100,14 @@ local plugins = {
 	},
 
 	{ "NvChad/nvterm", lazy = false, opts = overrides.nvterm },
-	{ "lukas-reineke/indent-blankline.nvim", lazy = false, opts = overrides.indent_blankline },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		event = { "BufReadPost", "BufNewFile" },
+		opts = overrides.indent_blankline,
+	},
 	{ "rainbowhxch/accelerated-jk.nvim", lazy = false },
-	{ "ThePrimeagen/harpoon", lazy = false },
-	{ "tpope/vim-repeat", lazy = false },
+	{ "ThePrimeagen/harpoon", event = "VeryLazy" },
+	{ "tpope/vim-repeat", event = "VeryLazy" },
 	-- { "justinmk/vim-sneak", lazy = false },
 	-- easily jump to any location and enhanced f/t motions for Leap
 	{
@@ -137,59 +141,109 @@ local plugins = {
 	},
 
 	--   -- ui components
-	{ "MunifTanjim/nui.nvim" },
+	-- { "MunifTanjim/nui.nvim" },
 	-- noicer ui
+	-- {
+	-- 	"folke/noice.nvim",
+	-- 	event = "VeryLazy",
+	-- 	opts = {
+	-- 		lsp = {
+	-- 			override = {
+	-- 				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+	-- 				["vim.lsp.util.stylize_markdown"] = true,
+	-- 				["vim.lsp.hover.enabled"] = false,
+	-- 			},
+	-- 		},
+	-- 		presets = {
+	-- 			bottom_search = true,
+	-- 			command_palette = true,
+	-- 			long_message_to_split = true,
+	-- 		},
+	-- 	},
+	--    -- stylua: ignore
+	--    keys = {
+	--      { "<S-Enter>", function() require("noice").redirect(vim.fn.getcmdline()) end, mode = "c", desc = "Redirect Cmdline" },
+	--      { "<leader>snl", function() require("noice").cmd("last") end, desc = "Noice Last Message" },
+	--      { "<leader>snh", function() require("noice").cmd("history") end, desc = "Noice History" },
+	--      { "<leader>sna", function() require("noice").cmd("all") end, desc = "Noice All" },
+	--      { "<c-f>", function() if not require("noice.lsp").scroll(4) then return "<c-f>" end end, silent = true, expr = true, desc = "Scroll forward", mode = {"i", "n", "s"} },
+	--      { "<c-b>", function() if not require("noice.lsp").scroll(-4) then return "<c-b>" end end, silent = true, expr = true, desc = "Scroll backward", mode = {"i", "n", "s"}},
+	--    },
+	-- },
+	-- {
+	-- 	"rcarriga/nvim-notify",
+	-- 	keys = {
+	-- 		{
+	-- 			"<leader>un",
+	-- 			function()
+	-- 				require("notify").dismiss({ silent = true, pending = true })
+	-- 			end,
+	-- 			desc = "Delete all Notifications",
+	-- 		},
+	-- 	},
+	-- 	opts = {
+	-- 		timeout = 3000,
+	-- 		max_height = function()
+	-- 			return math.floor(vim.o.lines * 0.75)
+	-- 		end,
+	-- 		max_width = function()
+	-- 			return math.floor(vim.o.columns * 0.75)
+	-- 		end,
+	-- 	},
+	-- 	init = function()
+	-- 		-- when noice is not enabled, install notify on VeryLazy
+	-- 		vim.notify = require("notify")
+	-- 	end,
+	-- },
+	-- todo comments
+	-- TODO this is test
+	-- better diagnostics list and others
 	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		opts = {
-			lsp = {
-				override = {
-					["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-					["vim.lsp.util.stylize_markdown"] = true,
-					["vim.lsp.hover.enabled"] = false,
-				},
+		"folke/trouble.nvim",
+		cmd = { "TroubleToggle", "Trouble" },
+		opts = { use_diagnostic_signs = true },
+		keys = {
+			{ "<leader>xx", "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Document Diagnostics (Trouble)" },
+			{ "<leader>xX", "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Workspace Diagnostics (Trouble)" },
+			{ "<leader>xL", "<cmd>TroubleToggle loclist<cr>", desc = "Location List (Trouble)" },
+			{ "<leader>xQ", "<cmd>TroubleToggle quickfix<cr>", desc = "Quickfix List (Trouble)" },
+			{
+				"[q",
+				function()
+					if require("trouble").is_open() then
+						require("trouble").previous({ skip_groups = true, jump = true })
+					else
+						vim.cmd.cprev()
+					end
+				end,
+				desc = "Previous trouble/quickfix item",
 			},
-			presets = {
-				bottom_search = true,
-				command_palette = true,
-				long_message_to_split = true,
+			{
+				"]q",
+				function()
+					if require("trouble").is_open() then
+						require("trouble").next({ skip_groups = true, jump = true })
+					else
+						vim.cmd.cnext()
+					end
+				end,
+				desc = "Next trouble/quickfix item",
 			},
 		},
-    -- stylua: ignore
-    keys = {
-      { "<S-Enter>", function() require("noice").redirect(vim.fn.getcmdline()) end, mode = "c", desc = "Redirect Cmdline" },
-      { "<leader>snl", function() require("noice").cmd("last") end, desc = "Noice Last Message" },
-      { "<leader>snh", function() require("noice").cmd("history") end, desc = "Noice History" },
-      { "<leader>sna", function() require("noice").cmd("all") end, desc = "Noice All" },
-      { "<c-f>", function() if not require("noice.lsp").scroll(4) then return "<c-f>" end end, silent = true, expr = true, desc = "Scroll forward", mode = {"i", "n", "s"} },
-      { "<c-b>", function() if not require("noice.lsp").scroll(-4) then return "<c-b>" end end, silent = true, expr = true, desc = "Scroll backward", mode = {"i", "n", "s"}},
-    },
 	},
 	{
-		"rcarriga/nvim-notify",
-		keys = {
-			{
-				"<leader>un",
-				function()
-					require("notify").dismiss({ silent = true, pending = true })
-				end,
-				desc = "Delete all Notifications",
-			},
-		},
-		opts = {
-			timeout = 3000,
-			max_height = function()
-				return math.floor(vim.o.lines * 0.75)
-			end,
-			max_width = function()
-				return math.floor(vim.o.columns * 0.75)
-			end,
-		},
-		init = function()
-			-- when noice is not enabled, install notify on VeryLazy
-			vim.notify = require("notify")
-		end,
+		"folke/todo-comments.nvim",
+		cmd = { "TodoTrouble", "TodoTelescope" },
+		event = { "BufReadPost", "BufNewFile" },
+		config = true,
+    -- stylua: ignore
+    keys = {
+      { "]t", function() require("todo-comments").jump_next() end, desc = "Next todo comment" },
+      { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous todo comment" },
+      { "<leader>xt", "<cmd>TodoTrouble<cr>", desc = "Todo (Trouble)" },
+      { "<leader>xT", "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
+      { "<leader>st", "<cmd>TodoTelescope<cr>", desc = "Todo" },
+    },
 	},
 	{ "tpope/vim-surround", lazy = false },
 	{ "tpope/vim-unimpaired", lazy = false },
