@@ -248,8 +248,8 @@ local plugins = {
 	{ "tpope/vim-surround", lazy = false },
 	{ "tpope/vim-unimpaired", lazy = false },
 	{ "tpope/vim-fugitive", lazy = false },
-	{ "ThePrimeagen/vim-be-good", lazy = false },
-	{ "gpanders/editorconfig.nvim", lazy = false },
+	{ "ThePrimeagen/vim-be-good", event = "VeryLazy" },
+	-- { "gpanders/editorconfig.nvim", lazy = false },
 }
 
 return plugins
