@@ -31,10 +31,10 @@ M.shaun = {
 		["Y"] = { '"+y$', "yank to clipboardvim", opts = { nowait = true } },
 		["<Left>"] = { "<cmd>vertical resize-5<CR>", "adjust vsplit", opts = { nowait = true } },
 		["<Right>"] = { "<cmd>vertical resize+5<CR>", "adjust vsplit", opts = { nowait = true } },
-		["<leader>sh"] = { "<cmd>set nosplitright <CR> <cmd>vsplit<CR>", "split left", opts = { nowait = true } },
-		["<leader>sl"] = { "<cmd>set splitright <CR> <cmd>vsplit<CR>", "split right", opts = { nowait = true } },
-		["<leader>sj"] = { "<cmd>set splitbelow <CR> <cmd>split<CR>", "split below", opts = { nowait = true } },
-		["<leader>sk"] = { "<cmd>set nosplitbelow <CR> <cmd>split<CR>", "split up", opts = { nowait = true } },
+		["<leader>|"] = { "<cmd>set nosplitright <CR> <cmd>vsplit<CR>", "split left", opts = { nowait = true } },
+		-- ["<leader>sl"] = { "<cmd>set splitright <CR> <cmd>vsplit<CR>", "split right", opts = { nowait = true } },
+		["<leader>-"] = { "<cmd>set splitbelow <CR> <cmd>split<CR>", "split below", opts = { nowait = true } },
+		-- ["<leader>sk"] = { "<cmd>set nosplitbelow <CR> <cmd>split<CR>", "split up", opts = { nowait = true } },
 
 		["<leader>ww"] = { "<cmd>e /Users/a560827/.shaunTILlkjlkj<CR>", "edit my file", opts = { nowait = true } },
 
@@ -157,17 +157,31 @@ M.telescope = {
 
 	n = {
 		-- toggle
-		["<leader>ts"] = { "<cmd> Telescope <CR>", "toggle telescope" },
-		["<leader>fx"] = { "<cmd> Telescope command_history <CR>", "find command history" },
-		["<leader>fs"] = { "<cmd> Telescope search_history <CR>", "find search history" },
-		["<leader>fo"] = { "<cmd> Telescope oldfiles cwd_only=true <CR>", "MRU" },
-		["<leader>fy"] = { "<cmd> Telescope registers <CR>", "find registers" },
-		["<leader>ft"] = { "<cmd> Telescope tags <CR>", "find tags" },
-		["<leader>ff"] = {
-			'<Cmd>lua require("telescope").extensions.frecency.frecency({ workspace = "CWD" })<CR>',
-			"find frecency",
-			opts = { noremap = true, silent = true },
-		},
+		["<leader>,"] = { "<cmd> Telescope buffers show_all_buffers=true<CR>", "Switch Buffer" },
+		["<leader>:"] = { "<cmd> Telescope command_history<CR>", "Command History" },
+		["<leader><space>"] = { "<cmd> Telescope live_grep cwd=false<CR>", "Find Files" },
+		-- find
+		["<leader>fb"] = { "<cmd> Telescope buffers<CR>", "Buffers" },
+		-- ["<leader>ff"] = {
+		-- 	'<Cmd>lua require("telescope").extensions.frecency.frecency({ workspace = "CWD" })<CR>',
+		-- 	"find frecency",
+		-- 	opts = { noremap = true, silent = true },
+		-- },
+		["<leader>ff"] = { "<cmd> Telescope find_files<CR>", "Find Files" },
+		["<leader>fF"] = { "<cmd> Telescope find_files cwd=false<CR>", "Find Files (cwd)" },
+		["<leader>fr"] = { "<cmd> Telescope oldfiles<CR>", "Recent" },
+		["<leader>fR"] = { "<cmd> Telescope oldfiles cwd=vim.loop.cwd()<CR>", "Recent (cwd)" },
+		--- git
+		["<leader>gc"] = { "<cmd> Telescope git_commits<CR>", "commits" },
+		["<leader>gs"] = { "<cmd> Telescope git_commits<CR>", "status" },
+		--- search
+		["<leader>sa"] = { "<cmd> Telescope autocommands<CR>", "Auto Commands" },
+		["<leader>sb"] = { "<cmd> Telescope current_buffer_fuzzy_find<CR>", "Buffer" },
+		["<leader>sc"] = { "<cmd> Telescope command_history<CR>", "Command History" },
+		["<leader>sC"] = { "<cmd> Telescope commands<CR>", "Commands" },
+		["<leader>sd"] = { "<cmd> Telescope diagnostics bufnr=0<CR>", "Document diagnostics" },
+		["<leader>sD"] = { "<cmd> Telescope diagnostics<CR>", "Workspace diagnostics" },
+		["<leader>sg"] = { "<cmd> Telescope diagnostics<CR>", "Workspace diagnostics" },
 	},
 }
 
