@@ -148,7 +148,7 @@ M.mason = {
 		"lua-language-server",
 		"pyright",
 		"rust-analyzer",
-		"rustfmt",
+		-- "rustfmt",
 		"shellcheck",
 		"shfmt",
 		"stylua",
