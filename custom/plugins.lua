@@ -72,6 +72,13 @@ local plugins = {
 		end,
 	},
 	{
+		"nvim-telescope/telescope-file-browser.nvim",
+		dependencies = { "telescope.nvim" },
+		config = function()
+			require("telescope").load_extension("file_browser")
+		end,
+	},
+	{
 		"nvim-telescope/telescope.nvim",
 		opts = overrides.telescope,
 	},

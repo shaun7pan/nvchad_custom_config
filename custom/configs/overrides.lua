@@ -208,8 +208,12 @@ M.telescope = {
 	defaults = {
 		prompt_prefix = "   ",
 	},
-	extensions_list = { "themes", "terms", "fzf", "frecency" },
+	extensions_list = { "themes", "terms", "fzf", "frecency", "file_browser" },
 	extensions = {
+		file_browser = {
+			grouped = true,
+			theme = "ivy",
+		},
 		frecency = {
 			show_filter_column = false,
 			show_unindexed = false,

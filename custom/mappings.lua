@@ -65,11 +65,6 @@ M.shaun = {
 			"harpoon select file",
 			opts = { nowait = true },
 		},
-		["<leader>4"] = {
-			'<cmd>lua require("harpoon.ui").nav_file(4)<CR>',
-			"harpoon select file",
-			opts = { nowait = true },
-		},
 		["<C-c>"] = { "<Esc>", "unmap tab", opts = { nowait = true } },
 		["]c"] = {
 			'<cmd>lua require("custom.functions").next_hunk()<CR>',
@@ -112,6 +107,7 @@ M.shaun = {
 		-- ["<C-u>"] = { "<C-u>zz", "be in the central of the screen", opts = { silent = true } },
 		-- ["n"] = { "nzzzv", "be in the central of the screen", opts = { silent = true } },
 		-- ["N"] = { "Nzzzv", "be in the central of the screen", opts = { silent = true } },
+		["<leader>ft"] = { "<cmd>Telescope file_browser<CR>", "Telescope File Tree", opts = { silent = true } },
 	},
 	v = {
 		--no longer needed since using system clipboard`
