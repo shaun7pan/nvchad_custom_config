@@ -107,7 +107,12 @@ M.shaun = {
 		-- ["<C-u>"] = { "<C-u>zz", "be in the central of the screen", opts = { silent = true } },
 		-- ["n"] = { "nzzzv", "be in the central of the screen", opts = { silent = true } },
 		-- ["N"] = { "Nzzzv", "be in the central of the screen", opts = { silent = true } },
-		["<leader>ft"] = { "<cmd>Telescope file_browser<CR>", "Telescope File Tree", opts = { silent = true } },
+		["<leader>tt"] = {
+			"<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>",
+			"Telescope File Tree",
+			opts = { silent = true },
+		},
+		["<leader>TT"] = { "<cmd>Telescope file_browser<CR>", "Telescope File Tree", opts = { silent = true } },
 	},
 	v = {
 		--no longer needed since using system clipboard`
